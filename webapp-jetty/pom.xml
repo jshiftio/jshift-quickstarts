@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+
+    Copyright 2016 Red Hat, Inc.
+
+    Red Hat licenses this file to you under the Apache License, version
+    2.0 (the "License"); you may not use this file except in compliance
+    with the License.  You may obtain a copy of the License at
+
+        http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS,
+    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or
+    implied.  See the License for the specific language governing
+    permissions and limitations under the License.
+
+-->
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>io.jshift</groupId>
+  <artifactId>jshift-maven-sample-webapp-jetty</artifactId>
+  <version>0.1-SNAPSHOT</version>
+  <packaging>war</packaging>
+  <build>
+    <finalName>jshift-maven-sample-webapp-jetty</finalName>
+    <plugins>
+      <plugin>
+        <artifactId>maven-war-plugin</artifactId>
+        <version>2.6</version>
+        <configuration>
+          <failOnMissingWebXml>false</failOnMissingWebXml>
+        </configuration>
+      </plugin>
+      <plugin>
+        <groupId>io.jshift</groupId>
+        <artifactId>k8s-maven-plugin</artifactId>
+        <version>0.1-SNAPSHOT</version>
+        <executions>
+          <execution>
+            <id>jshift</id>
+            <goals>
+              <goal>resource</goal>
+              <goal>build</goal>
+              <goal>helm</goal>
+            </goals>
+          </execution>
+        </executions>
+      </plugin>
+    </plugins>
+  </build>
+  <properties>
+    <maven.compiler.source>1.8</maven.compiler.source>
+    <maven.compiler.target>1.8</maven.compiler.target>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+  </properties>
+  <profiles>
+    <profile>
+      <id>kit</id>
+      <activation/>
+      <build>
+        <plugins>
+          <plugin>
+            <artifactId>maven-failsafe-plugin</artifactId>
+            <version>2.19</version>
+            <configuration>
+              <includes>
+                <include>**/*KT.*</include>
+              </includes>
+            </configuration>
+          </plugin>
+        </plugins>
+      </build>
+    </profile>
+  </profiles>
+  <dependencies>
+    <dependency>
+      <groupId>io.fabric8</groupId>
+      <artifactId>fabric8-arquillian</artifactId>
+      <scope>test</scope>
+    </dependency>
+  </dependencies>
+  <dependencyManagement>
+    <dependencies>
+      <dependency>
+        <groupId>io.fabric8</groupId>
+        <artifactId>fabric8-arquillian</artifactId>
+        <version>2.2.158</version>
+        <scope>test</scope>
+      </dependency>
+    </dependencies>
+  </dependencyManagement>
+</project>
