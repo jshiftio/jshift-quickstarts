@@ -1,0 +1,29 @@
+# Spring Boot Sample With External Resources
+
+This is a sample project to use Jshift plugins.
+
+### Steps to use
+
+Make sure that Kubernetes/OpenShift cluster or Minikube/minishift is running. In case, if anything of this is not running, you can
+run minishift/minikube to test this application by using following command.
+
+
+#### For Kubernetes
+Start your cluster:
+```
+minikube start
+```
+Below command will create your OpenShift resource descriptors.
+```
+mvn clean k8s:resource -Pkubernetes
+```
+
+Now start docker build  by hitting the build goal.
+```
+mvn package k8s:build -Pkubernetes
+```
+
+Below command will deploy your application on Openshift cluster.
+```
+mvn k8s:deploy -Pkubernetes
+```
