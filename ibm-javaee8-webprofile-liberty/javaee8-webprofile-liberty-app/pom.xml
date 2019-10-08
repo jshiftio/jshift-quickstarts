@@ -22,7 +22,7 @@
 
     <groupId>io.jshift</groupId>
     <artifactId>javaee8-webprofile-liberty-app</artifactId>
-    <version>0.1-SNAPSHOT</version>
+    <version>0.1.0</version>
     <packaging>war</packaging>
 
     <name>Jshift Maven :: Sample :: JavaEE 8 WebProfile :: Application</name>
@@ -30,7 +30,7 @@
     <parent>
         <groupId>io.jshift</groupId>
         <artifactId>javaee8-webprofile-liberty</artifactId>
-        <version>0.1-SNAPSHOT</version>
+        <version>0.1.0</version>
     </parent>
 
     <properties>

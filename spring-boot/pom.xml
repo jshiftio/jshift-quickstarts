@@ -23,7 +23,7 @@
 
     <artifactId>jshift-maven-sample-spring-boot</artifactId>
     <groupId>io.jshift</groupId>
-    <version>0.1-SNAPSHOT</version>
+    <version>0.1.0</version>
     <packaging>jar</packaging>
 
     <parent>
@@ -88,7 +88,7 @@
             <plugin>
                 <groupId>io.jshift</groupId>
                 <artifactId>k8s-maven-plugin</artifactId>
-                <version>0.1-SNAPSHOT</version>
+                <version>${project.version}</version>
 
                 <configuration>
 
@@ -142,7 +142,7 @@
             <plugin>
                 <groupId>io.jshift</groupId>
                 <artifactId>oc-maven-plugin</artifactId>
-                <version>0.1-SNAPSHOT</version>
+                <version>${project.version}</version>
 
                 <configuration>
 

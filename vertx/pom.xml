@@ -23,7 +23,7 @@
 
   <artifactId>jshift-maven-sample-vertx</artifactId>
   <groupId>io.jshift</groupId>
-  <version>0.1-SNAPSHOT</version>
+  <version>0.1.0</version>
   <packaging>jar</packaging>
 
   <name>Jshift Maven :: Sample :: Vertx Web</name>
@@ -96,7 +96,7 @@
 	  <plugin>
 	    <groupId>io.jshift</groupId>
 	    <artifactId>k8s-maven-plugin</artifactId>
-	    <version>0.1-SNAPSHOT</version>
+	    <version>${project.version}</version>
 	    <executions>
 	      <execution>
 		<id>jshift</id>
@@ -134,7 +134,7 @@
 	  <plugin>
 	    <groupId>io.jshift</groupId>
 	    <artifactId>oc-maven-plugin</artifactId>
-	    <version>0.1-SNAPSHOT</version>
+	    <version>${project.version}</version>
 	    <executions>
 	      <execution>
 		<id>jshift</id>
