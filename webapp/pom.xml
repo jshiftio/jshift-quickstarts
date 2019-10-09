@@ -21,7 +21,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>io.jshift</groupId>
   <artifactId>jshift-maven-sample-webapp</artifactId>
-  <version>0.1-SNAPSHOT</version>
+  <version>0.1.0</version>
   <packaging>war</packaging>
   <build>
     <plugins>
@@ -35,7 +35,7 @@
       <plugin>
         <groupId>io.jshift</groupId>
         <artifactId>k8s-maven-plugin</artifactId>
-        <version>0.1-SNAPSHOT</version>
+        <version>${project.version}</version>
       </plugin>
     </plugins>
   </build>

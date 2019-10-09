@@ -20,7 +20,7 @@
   <modelVersion>4.0.0</modelVersion>
 
   <artifactId>jshift-maven-sample-quarkus</artifactId>
-  <version>4.1-SNAPSHOT</version>
+  <version>0.1.0</version>
 
   <groupId>io.jshift</groupId>
   <name>Jshift Maven :: Sample :: Quarkus</name>
@@ -88,7 +88,7 @@
       <plugin>
         <groupId>io.jshift</groupId>
         <artifactId>k8s-maven-plugin</artifactId>
-        <version>0.1-SNAPSHOT</version>
+        <version>${project.version}</version>
       </plugin>
 
     </plugins>

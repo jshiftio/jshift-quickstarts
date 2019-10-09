@@ -22,7 +22,7 @@
 
   <groupId>io.jshift</groupId>
   <artifactId>jshift-maven-sample-thorntail</artifactId>
-  <version>0.1-SNAPSHOT</version>
+  <version>0.1.0</version>
   <packaging>war</packaging>
 
   <name>Jshift Maven :: Sample :: Thorntail</name>
@@ -75,6 +75,7 @@
 	  <plugin>
 	    <groupId>io.jshift</groupId>
 	    <artifactId>k8s-maven-plugin</artifactId>
+            <version>${project.version}</version>
 	    <executions>
 	      <execution>
 		<goals>
@@ -109,6 +110,7 @@
 	  <plugin>
 	    <groupId>io.jshift</groupId>
 	    <artifactId>oc-maven-plugin</artifactId>
+            <version>${project.version}</version>
 	    <executions>
 	      <execution>
 		<goals>
